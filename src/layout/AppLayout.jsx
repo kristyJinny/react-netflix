@@ -4,24 +4,28 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export const AppLayout = () => {
   return (
     <div className="">
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="px-5 bg-black" data-bs-theme="dark">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
+          <Link to={"/"}>
+            <Navbar.Brand className="me-4">
+              <img src="/main-logo.png" width={148} alt="netflix" />
+            </Navbar.Brand>
+          </Link>
+          <Navbar.Collapse>
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
-              navbarScroll
+
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/movies">Movies</Nav.Link>
             </Nav>
+
             <Form className="d-flex">
               <Form.Control
                 type="search"
@@ -29,7 +33,7 @@ export const AppLayout = () => {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-danger">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>

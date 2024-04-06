@@ -15,7 +15,7 @@ import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <Routes>
         {/* user 화면 */}
         <Route path="/" element={<AppLayout />}>

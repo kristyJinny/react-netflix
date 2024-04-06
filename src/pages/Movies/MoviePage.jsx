@@ -1,5 +1,5 @@
 import React from "react";
 
 export const MoviePage = () => {
-  return <div>MoviePage</div>;
+  return <div data-page="MoviePage">MoviePage</div>;
 };

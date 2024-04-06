@@ -2,3 +2,9 @@ body {
   background-color: black !important;
   color: white;
 }
+
+[data-page] {
+  margin: 0 auto;
+  padding: 20px 50px 60px 74px;
+  color:#fff;
+}
