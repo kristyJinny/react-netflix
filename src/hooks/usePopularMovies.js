@@ -9,7 +9,8 @@ const fectchPopularMovies = () => {
 export const usePopularMoviesQuery = () => {
     return useQuery({
         queryKey: ['movie-popular'],
-        queryFn: fectchPopularMovies
+        queryFn: fectchPopularMovies,
+        select: (result) => result.data,
     })
 }
 // hook 을 만드는 이유는 , 다른 곳에서도 사용 할 수 있으니깐
