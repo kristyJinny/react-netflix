@@ -13,14 +13,17 @@ export const AppLayout = () => {
         <Container fluid>
           <Link to={"/"}>
             <Navbar.Brand className="me-4">
-              <img src="https://i.namu.wiki/i/O5nlmQC3RdeHArqLXAd33Vq42pV1QeHqsPdSogKt8OcWUD1EubJrTNYn3u5r046jmfFwNNi1fZJry1gLR0TJTw.svg" width={148} alt="main logo" />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/1128px-Netflix_2015_N_logo.svg.png"
+                height={30}
+                alt="main logo"
+              />
             </Navbar.Brand>
           </Link>
           <Navbar.Collapse>
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
-
             >
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/movies">Movies</Nav.Link>
