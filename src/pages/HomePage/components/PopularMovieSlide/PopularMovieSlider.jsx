@@ -3,6 +3,8 @@ import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
 import Alert from "react-bootstrap/Alert";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import MovieCard from "../MovieCard/MovieCard";
+import "./PopularMovieSlider.style.css";
 
 const responsive = {
   desktop: {
@@ -54,10 +56,9 @@ const PopularMovieSlider = () => {
         // deviceType={this.props.deviceType}
         // dotListClass="custom-dot-list-style"
       >
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
+        {data.results.map((movie, index) => (
+          <MovieCard movie={movie} key={index} />
+        ))}
       </Carousel>
       ;
     </div>
