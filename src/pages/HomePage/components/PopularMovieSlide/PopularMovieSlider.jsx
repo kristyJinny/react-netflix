@@ -33,8 +33,8 @@ const PopularMovieSlider = () => {
   }
 
   return (
-    <div>
-      <h3>PopularMovieSlider</h3>
+    <div data-component="Slider">
+      <h3>Popular Movies</h3>
       <Carousel
         infinite={true}
         centerMode={true}
