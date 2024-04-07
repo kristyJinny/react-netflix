@@ -8,7 +8,7 @@ const fectchPopularMovies = () => {
 
 export const usePopularMoviesQuery = () => {
     return useQuery({
-        queryKey: ['move-popular'],
+        queryKey: ['movie-popular'],
         queryFn: fectchPopularMovies
     })
 }
