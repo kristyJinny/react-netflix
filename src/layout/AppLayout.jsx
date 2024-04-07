@@ -13,7 +13,7 @@ export const AppLayout = () => {
         <Container fluid>
           <Link to={"/"}>
             <Navbar.Brand className="me-4">
-              <img src="/main-logo.png" width={148} alt="netflix" />
+              <img src="//i.namu.wiki/i/O5nlmQC3RdeHArqLXAd33Vq42pV1QeHqsPdSogKt8OcWUD1EubJrTNYn3u5r046jmfFwNNi1fZJry1gLR0TJTw.svg" width={148} alt="main logo" />
             </Navbar.Brand>
           </Link>
           <Navbar.Collapse>
