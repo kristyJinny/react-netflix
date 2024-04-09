@@ -1,9 +1,24 @@
 import React from "react";
 import { Badge } from "react-bootstrap";
 import "./MovieCard.style.css";
+import "react-multi-carousel/lib/styles.css";
+import { useMovieGenreQuery } from "../../hooks/\buseMovieGenre";
 
 const MovieCard = ({ movie }) => {
+  const { data: genresData } = useMovieGenreQuery();
+  //console.log(genres);
+
   const imageUrl = `https://media.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`;
+
+  const showGenre = (genreIdList) => {
+    if (!genresData) return []; // 장르 정보가 없을 경우 빈 배열 반환
+
+    const genresNameList = genreIdList.map((id) => {
+      const genreObj = genresData.find((genre) => genre.id === id);
+      return genreObj.name;
+    });
+    return genresNameList;
+  };
 
   return (
     <div style={{ backgroundImage: `url(${imageUrl})` }} className="movie-card">
@@ -11,8 +26,10 @@ const MovieCard = ({ movie }) => {
         <div className="into-head">
           <h1 className="overlay-title">{movie.title}</h1>
           <div className="badge-area">
-            {movie.genre_ids.map((id) => (
-              <Badge bg="danger">{id}</Badge>
+            {showGenre(movie.genre_ids).map((genre, index) => (
+              <Badge bg="danger" key={index} className="me-1">
+                {genre}
+              </Badge>
             ))}
           </div>
         </div>

@@ -4,7 +4,7 @@ import "./Banner.style.css";
 
 const Banner = ({ movie }) => {
   const imageUrl = `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie?.poster_path}`;
-  // const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
   return (
     <>
       <div style={{ backgroundImage: `url(${imageUrl})` }} className="banner">
