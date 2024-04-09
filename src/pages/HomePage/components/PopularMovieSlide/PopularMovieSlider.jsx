@@ -41,20 +41,6 @@ const PopularMovieSlider = () => {
         itemClass="movie-slider p-1"
         containerClass="carousel-container"
         responsive={responsive}
-
-        // swipeable={false}
-        // draggable={false}
-        // showDots={true}
-        // ssr={true}
-
-        // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-        // autoPlaySpeed={1000}
-        // keyBoardControl={true}
-        // customTransition="all .5"
-        // transitionDuration={500}
-        // removeArrowOnDeviceType={["tablet", "mobile"]}
-        // deviceType={this.props.deviceType}
-        // dotListClass="custom-dot-list-style"
       >
         {data.results.map((movie, index) => (
           <MovieCard movie={movie} key={index} />
