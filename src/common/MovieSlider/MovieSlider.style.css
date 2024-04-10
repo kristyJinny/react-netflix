@@ -1,23 +1,15 @@
-h3 {
-  padding-left: 30px;
+.title {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.react-multi-carousel-track li {
+  width: 250px !important;
 }
 
 .carousel-container {
-  overflow-x: hidden;
-  overflow-y: visible;
-  height: 500px;
-}
-.sliderClass {
-  height: 90%;
-}
-@media (max-width: 480px) {
-  .carousel-container {
-    height: 290px;
-    display: flex;
-    overflow-y: hidden;
-    justify-content: space-between;
-  }
-  .sliderClass {
-    height: 100%;
-  }
+  overflow: hidden;
+  height: 440px;
 }

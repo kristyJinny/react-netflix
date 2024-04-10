@@ -7,7 +7,7 @@ import "./MovieSlider.style.css";
 const MovieSlider = ({ title, movies, responsive }) => {
   return (
     <div>
-      <h3 className="fw-bold pt-5">{title}</h3>
+      <h3 className="title">{title}</h3>
       {movies.length > 0 ? (
         <Carousel
           responsive={responsive}

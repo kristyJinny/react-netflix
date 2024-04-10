@@ -15,7 +15,7 @@
   background: linear-gradient(to top, black, transparent);
 }
 .banner-text-area {
-  width: 36%;
+  /* width: 36%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,8 +29,22 @@
   max-width: 200px;
   width: 50%;
 }
-@media (max-width: 480px) {
+/* 
+@media screen and (max-width: 768px) {
+  .banner-info {
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    width: 100%;
+    padding-right: 2rem;
+  }
+} */
+
+@media (max-width: 768px) {
   .banner-text-area {
+    width: 100%;
+  }
+  .banner-text-area button {
     width: 100%;
   }
 }
