@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 import { AppLayout } from "./layout/AppLayout";
 import { HomePage } from "./pages/HomePage/HomePage";
-import { MoviePage } from "./pages/Movies/MoviePage";
 import { MovieDetail } from "./pages/MovieDetail/MovieDetail";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
+import MoviePage from "./pages/MoviePage/MoviePage";
 
 // 메인 홈 화면: "/"
 // 영화 전체 보여주는 페이지 ( 서치): "/movies"
